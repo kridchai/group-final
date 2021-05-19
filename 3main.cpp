@@ -155,6 +155,7 @@ int Part3() {
   else if(ip1==2)
     {
        cout<<"what is this\n";
+        getchar();
        status = turn2r();
         if(status=="dead")
       {
