@@ -23,7 +23,7 @@ jjsSorcerer::~jjsSorcerer(){
 }
 void jjsSorcerer::ss(){
   setAtk(getAtk()+200);
-  cout<<"ryoiki tenkai activate(ท่าไม้ตายของคุณได้ถูกปลุกขึ้นมาแล้ว ขขขแข็งแกร่งชะมัด)\nชนะแบบไร้เงื่อนไข\n ";
+  cout<<"ryoiki tenkai activate(ท่าไม้ตายของคุณได้ถูกปลุกขึ้นมาแล้ว ขขขแข็งแกร่งชะมัด)\nชนะแบบไร้เงื่อนไข\n";
 }
 
 standUser::standUser(string n,int x,int y):human(n,x,y){
