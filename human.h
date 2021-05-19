@@ -8,25 +8,44 @@ class human{
   public:
   string name;
   int hp;
-  int atk;
+  int atTack;
   void get_name();
   void survive();
+  bool isDead();
+  void setAtk(int );
+  int getAtk();
   human(string,int,int);
+  virtual ~human();
 };
 
 human::human(string n,int h=3,int a){
    name=n;
    hp=h;
-   atk=a;
+   atTack=a;
 }
 void human::get_name(){
   
   cout<<"What is your name ? : ";
    cin>>name;
-   cin>>atk;
+   cin>>atTack;
 
    human(name,hp,atk);
  };
+
+
+bool human::isDead(){
+          if(hp==0){
+            return true;
+          }
+          else return false;
+    }
+void human::setAtk(int x){
+  atTack = x;
+}
+
+int human::getAtk(){
+  return atTack;
+
 
 void human::survive(){
   thing t;
