@@ -1,5 +1,5 @@
 #include <iostream>
-#include "human.h"
+#include "human.cpp"
 using namespace std;
 class jjsSorcerer:public human{
 public:

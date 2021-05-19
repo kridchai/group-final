@@ -1,8 +1,8 @@
-#ifndef human_h
-#define human_h
+//#ifndef human_h
+//#define human_h
 
 #include <iostream>
-#include "thing.h"
+#include "thing.cpp"
 using namespace std;
 class human{
   public:
@@ -14,11 +14,12 @@ class human{
   bool isDead();
   void setAtk(int );
   int getAtk();
-  human(string,int,int);
+  human(string,int = 3,int = 0);
+  void setHp(int h);
+  int getHp();
   virtual ~human();
 };
-
-human::human(string n,int h=3,int a){
+human::human(string n,int h,int a){
    name=n;
    hp=h;
    atTack=a;
@@ -29,8 +30,20 @@ void human::get_name(){
    cin>>name;
    cin>>atTack;
 
-   human(name,hp,atk);
- };
+   human(name,hp,atTack);
+ }
+
+void human::setHp(int h){
+            hp = h;
+        }
+int human::getHp(){
+          return hp;
+        }
+human:: ~human(){
+        
+        }
+
+
 
 
 bool human::isDead(){
@@ -45,7 +58,7 @@ void human::setAtk(int x){
 
 int human::getAtk(){
   return atTack;
-
+}
 
 void human::survive(){
   thing t;
@@ -141,4 +154,4 @@ void human::survive(){
   }
 
 }
-#endif
+//#endif

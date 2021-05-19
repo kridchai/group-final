@@ -6,7 +6,7 @@
 #include "rolehuman.cpp"
 #include "bst.h"
 #include "swap.h"
-#include"myex.cpp"
+#include "myex.cpp"
 using namespace std;
 int ip2,ip3;
 string name;
@@ -106,7 +106,7 @@ string turn2r(){
 }
 
 
-int main() {
+int Part3() {
   int ip1;
   string status;
   cout<<"fill your name\n";

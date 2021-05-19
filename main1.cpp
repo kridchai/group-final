@@ -1,6 +1,6 @@
 #include <iostream>
-#include "human.h"
-#include "thing.h"
+#include "human.cpp"
+#include "thing.cpp"
 
 using namespace std;
 

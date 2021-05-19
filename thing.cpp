@@ -1,5 +1,5 @@
-#ifndef thing_h
-#define thing_h
+//#ifndef thing_h
+//#define thing_h
 #include <iostream>
 using namespace std;
 
@@ -46,7 +46,7 @@ void thing::get_thing(){
     case 4:
     myweapon.something();
     break;
-    default:
+    //default:
     
   }
    i++;
@@ -55,4 +55,4 @@ void thing::get_thing(){
 /////////////////////
 
 
-#endif
+//#endif
