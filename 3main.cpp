@@ -14,6 +14,7 @@ my_cin e1;
 string turn2l(){
   int bomb;
   cout<<"1) fight           2) escape\n";
+   getchar();
 try{
   do{
    cout<<"choose your choice\n";
@@ -63,7 +64,9 @@ string turn2r(){
     case 2:hvirus v3("defalt");cout<<"I am "<<v3.getType()<<endl;break;
   }
   cout<<"you can kill me by win this game\n";
+  getchar();
   cout<<setw(20)<<"this game is rock paper scissor 1 round only\n";
+   getchar();
   cout<<"1) play dark game           2) escape\n";
   try{ 
   do{
@@ -81,6 +84,7 @@ string turn2r(){
       if(cin.fail())
           throw e1;
       cout<<"ศัตรูออกค้อน\n";
+       getchar();
       switch(rps){
         case 0:cout<<"เสมอแต่ตายซะ\n";return "dead";
         case 2:cout<<"แพ้มุแง";return "dead";
@@ -115,7 +119,8 @@ int Part3() {
     throw "wrong type";
     jjsSorcerer j(name);
   
-  std::cout <<"I awaken along the night \nwhere is this?\noh I just got covid-19\n";
+  std::cout <<"I awaken along the night \nwhere is this?\noh I just infect covid-19\n";
+   getchar();
   cout<<"1) keep lay down\n2) go outside\n";
   try{
   
@@ -127,7 +132,9 @@ int Part3() {
   if(ip1 == 1)
     {
       cout<<name<<":Is that a doctor?\n";
+       getchar();
       cout<<"Yes I am a doctor I need to kill you now!\n";
+       getchar();
       status = turn2l();
       if(status=="dead")
       {
@@ -174,11 +181,17 @@ int Part3() {
     cout<<"invalid choice!!\n"; 
   }while(ip1>2||ip1<1);
 cout<<name<<" :what i am doing here\n";
+ getchar();
 cout<<"?: welcome to dark game again "<<name<<endl;
+ getchar();
 cout<<name<<":กกกก แกต้องการอะไรน่ะ\n";
+ getchar();
 cout<<"?: ฉันก็แค่ต้องการเล่นสนุกกับนายเฉยๆ "<<name<<endl;
+ getchar();
 cout<<setw(20)<<"Guess the number";
+ getchar();
 cout<<"rule\n1)มีเลขอยู่10ตัว ระหว่าง0-99ให้เดาให้ถูกตัวเดียวจากโอกาสทั้งหมด3ครั้ง";
+ getchar();
  BST b;int ran;
    b.rootPtr = NULL; // tree initially empty39
 int list[10];
@@ -212,10 +225,11 @@ for(int i=0;i<3;i++)
 if(f==0)
 {
   cout<<"you lost";puts( "\nเฉลย :\n" );
-   preOrder( b.rootPtr );return 0;
+   inOrder( b.rootPtr );return 0;
 }
 puts( "\nเฉลย :\n" );
 cout<<"อีกไม่กี่อึดใจเดียวคุณก็จะรอดชีวิตแล้วอดทนไว้!!\n";
+ getchar();
 cout<<"last mission ให้เรียงเลขจาก10ตัวที่แล้วจากน้อยไปมาก ยากใช่ไหมล่ะ หึ\n";
 
 int min,posmin;
@@ -252,8 +266,11 @@ for(int i =0;i<10;i++)
   }
 }
 cout<<setw(20)<<"Congratulation you Survive!!!\n";
+ getchar();
 cout<<"where is this\n";
+ getchar();
 cout<<"นี่เราฝันไปหรือเนี่ย บ้าจริง\n";
+ getchar();
 cout<<"end\n";
 }
 catch(const char *c){
