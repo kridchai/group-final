@@ -4,10 +4,14 @@
 #include "human.h"
 
 
-int Part2() {
+int Part2(string n) {
   open n1,n2;
-  
-  cout<<name<<"\n------- New day -------"<<endl;
+  string name;
+  name = n;
+
+  cout<<name<<": Ahhhhhhhhh~~~~~~~~"<<endl;.
+  getchar();
+  cout<<name<<": WHAT!! I just have nightmare"<<endl;
   getchar();
   cout << "Today I\'m going to work!!!\n\n";
   getchar();
@@ -20,7 +24,7 @@ int Part2() {
   getchar();
   cout<<"Keep working until noon."<<endl;
   getchar();
-  cout<<"Me: I\'m so hungry. Friends are you going to have lunch with me."<<endl;
+  cout<<name<<": I\'m so hungry. Friends are you going to have lunch with me."<<endl;
   getchar();
   cout<<"Friends: Yes, I\'m hungry too."<<endl;
   getchar();

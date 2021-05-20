@@ -9,7 +9,7 @@ class human{
   string name;
   int hp;
   int atTack;
-  void get_name();
+  void get_name(string n);
   void survive();
   void survive2();
   bool isDead();
@@ -25,12 +25,10 @@ human::human(string n,int h,int a){
    hp=h;
    atTack=a;
 }
-void human::get_name(){
+void human::get_name(string name){
   
-  cout<<"What is your name ? : ";
-   cin>>name;
    cin>>atTack;
-
+   hp = 100;
    human(name,hp,atTack);
  }
 

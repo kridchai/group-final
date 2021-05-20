@@ -9,7 +9,6 @@ public:
        void add_thing(thing*&);
        void show_all();
        void free_t(thing*&);
-      
        ~LL();
        LL();
       
@@ -84,5 +83,7 @@ void LL::add_thing(thing *&A){
   }
   
  }
+
+ 
 
  

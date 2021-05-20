@@ -110,13 +110,16 @@ string turn2r(){
 }
 
 
-int Part3() {
+int Part3(string n) {
   int ip1;
   string status;
-  cout<<"fill your name\n";
+  name = n;
+  /*cout<<"fill your name\n";
   cin>>name;
   if(cin.fail())
     throw "wrong type";
+    */
+
     jjsSorcerer j(name);
   
   std::cout <<"I awaken along the night \nwhere is this?\noh I just infect covid-19\n";
