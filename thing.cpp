@@ -4,12 +4,38 @@
 using namespace std;
 
 class thing{
+  private:
+        thing* next;
+        string data;
+  
   public:
     void something() {
     cout << "The animal makes a sound \n" ;
   }
-  void get_thing();
+    void get_thing();
+    virtual void show_thing();
+    void insert(thing*&); 
+    thing* move_next();
+
 };
+
+thing* thing::move_next(){
+      return next;
+}
+void  thing:: show_thing(){
+         cout<<"Node data:"<<data<<endl;
+ }
+void thing::insert(thing*& x){
+     x->next=this;
+}
+
+
+
+
+
+
+
+
 // Derived class
 class Food : public thing {
   public:
@@ -51,7 +77,9 @@ void thing::get_thing(){
   }
    i++;
   }while(i<2);
-}
+
+
+
 /////////////////////
 
 

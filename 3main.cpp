@@ -273,6 +273,7 @@ cout<<"where is this\n";
 cout<<"นี่เราฝันไปหรือเนี่ย บ้าจริง\n";
  getchar();
 cout<<"end\n";
+deleteNode(b.rootPtr);
 }
 catch(const char *c){
   cout<<c<<endl;

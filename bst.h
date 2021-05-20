@@ -72,8 +72,8 @@ void inOrder( TreeNodePtr treePtr )
 void preOrder( TreeNodePtr treePtr ){
     if(treePtr!=NULL)
     {
-        preOrder(treePtr->leftPtr);
     printf("%3d",treePtr->data);
+    preOrder(treePtr->leftPtr);
     preOrder(treePtr->rightPtr);
     }
     
@@ -84,7 +84,7 @@ void postOrder( TreeNodePtr treePtr ){
     {
       postOrder(treePtr->leftPtr);
       postOrder(treePtr->rightPtr);
-      preOrder(treePtr->rightPtr);
+     printf("%3d",treePtr->data);
     }
     
 }
@@ -120,4 +120,13 @@ int find(BST *b,int x){
         t = t->rightPtr;
     }
     
+}
+
+void deleteNode( TreeNodePtr treePtr )
+{ 
+   if ( treePtr != NULL ) {                
+      deleteNode( treePtr->leftPtr );    
+      deleteNode( treePtr->rightPtr ); 
+      delete(treePtr);
+   }                         
 }
