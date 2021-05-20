@@ -77,6 +77,7 @@ void thing::get_thing(){
   }
    i++;
   }while(i<2);
+}
 
 
 
