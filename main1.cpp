@@ -1,18 +1,18 @@
 #include <iostream>
-#include "human.cpp"
-#include "thing.cpp"
+#include "human.h"
 
 using namespace std;
 
-int main() {
-human h; 
+int part1() {
+human h("Default"); 
   char cha;
   cha = getchar();
   string name;
-  int hp=3;
+  int hp=100;
 
   h.get_name();
   h.survive();
+  h.survive2();
   
 
   

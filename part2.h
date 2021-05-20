@@ -7,9 +7,6 @@ class open{
     string name;
   
   public:
-    //open(int h = 100, int c = 1000, string = "OMG");
-    //void display_open();
-    
     void get_turn1_go_work();
     void get_turn2_eat_lunch();
     void get_turn3_eat_after_work();

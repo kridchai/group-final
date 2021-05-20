@@ -3,10 +3,10 @@
 #include<cstdlib>
 #include<ctime>
 #include "rolevirus.cpp"
-#include "rolehuman.cpp"
 #include "bst.h"
 #include "swap.h"
 #include "myex.cpp"
+#include "rolehuman.cpp"
 using namespace std;
 int ip2,ip3;
 string name;
@@ -229,6 +229,7 @@ if(f==0)
    inOrder( b.rootPtr );return 0;
 }
 puts( "\nเฉลย :\n" );
+ inOrder( b.rootPtr );
 cout<<"อีกไม่กี่อึดใจเดียวคุณก็จะรอดชีวิตแล้วอดทนไว้!!\n";
  getchar();
 cout<<"last mission ให้เรียงเลขจาก10ตัวที่แล้วจากน้อยไปมาก ยากใช่ไหมล่ะ หึ\n";

@@ -1,8 +1,8 @@
-//#ifndef human_h
-//#define human_h
+#ifndef human_h
+#define human_h
 
 #include <iostream>
-#include "thing.cpp"
+#include "LLthing.cpp"
 using namespace std;
 class human{
   public:
@@ -11,6 +11,7 @@ class human{
   int atTack;
   void get_name();
   void survive();
+  void survive2();
   bool isDead();
   void setAtk(int );
   int getAtk();
@@ -112,6 +113,13 @@ void human::survive(){
       cout<<"Suddenly!! Infected person stand in front of you"<<endl;
       getchar();
       cout<<"Then he sneeze at you"<<endl;
+      getchar();
+      cout<<"you are infected COVID-19"<<endl;
+      getchar();
+      cout<<name<<": Arghhhhhhh!! "<<endl;
+      getchar();
+      cout<<"Then you run back to your room"<<endl;
+      cout<<"And you faint in your room"<<endl;
 
     }
     else if(way1==2){
@@ -134,24 +142,124 @@ void human::survive(){
         getchar();
         cout<<"Run very quickly"<<endl;
         getchar();
+        cout<<"When you in your room"<<endl;
+        getchar();
+        cout<<name<<": I very tried -_- (sleep)"<<endl;
       }
       else if(way1==2){
         cout<<name<<": I have to get some food or things that can help survive"<<endl;
         cout<<"What you want to pick ? (can pick only 2 things)"<<endl;
         cout<<"1.bread 2.cutter 3.water 4.scissor"<<endl;
-        
         t.get_thing();
+          cout<<"When you already get item "<<endl;
+        getchar();
+        cout<<"Run back to your room very quickly"<<endl;
+        getchar();
+        cout<<"Enter the room"<<endl;
+        getchar();
+        cout<<"What you want to do next?"<<endl;
+        cout<<"1)eat food \n 2)sleep"<<endl;
+        cin>>way1;
+        if (way1==1){
+          Food food;
+          food.eat();
+        }
+        else{
+          break;
+        }
+
+      }
 
       }
 
     }
-  }
+  
   else if(way1==2){
     cout<<name<<": I very scared"<<endl;
     getchar();
     cout<<name<<": I will not go outside"<<endl;
     getchar();
+    cout<<"Then you look down from window "<<endl;
+    getchar();
+    cout<<name<<": What is that!!!!"<<endl;
+    getchar();
+    cout<<name<<": That is zombies!!"<<endl;
+    getchar();
+    cout<<"Then you shock and faint"<<endl;
   }
 
 }
-//#endif
+
+//day2
+void human::survive2(){
+  weapon t;
+  int way2;
+   cout<<name<<": How long I sleep"<<endl;
+   getchar();
+   cout<<name<<": I have to get out off here"<<endl;
+   getchar();
+   cout<<name<<": and find a safety place"<<endl;
+   getchar();
+   cout<<"Open the door"<<endl;
+   getchar();
+   cout<<"COVID zombies stay front of your room"<<endl;
+     cout<<"Do you want to go out ?"<<endl;
+  cout<<"1)YES     2)NO"<<endl;
+  cin>>way2;
+    if(way2==1){
+      cout<<"Do you want to use weapon?"<<endl;
+      cout<<"1)YES     2)NO"<<endl;
+      cin>>way2;
+      if(way2==1){
+      t.use_thing();
+      cout<<"You use your weapon kill zombies"<<endl;
+      getchar();
+      cout<<"And run away"<<endl;
+      }
+      else if(way2==2){
+        cout<<"zombie attack you"<<endl;
+         getchar();
+        cout<<"and you die"<<endl;
+      }
+      
+    }
+    else{
+      cout<<name<<"I have to find the another way"<<endl;
+       getchar();
+       cout<<"You close the door"<<endl;
+       getchar();
+       cout<<"What do you want to do next?"<<endl;
+       cout<<"1)Climb out the window"<<endl;
+        cout<<"2)Wait in your room"<<endl;
+         cin>>way2;
+        if(way2==1){
+          cout<<name<<": I have to escape through the window"<<endl;
+           getchar();
+          cout<<"Climb out the window"<<endl;
+           getchar();
+          cout<<"But! Suddenly accident is happen"<<endl;
+           getchar();
+          cout<<"Then you fall on the ground"<<endl;
+          getchar();
+          cout<<"And die finally"<<endl;
+          if(way2==1){
+        t.use_thing();
+        cout<<"You use your weapon kill zombies"<<endl;
+        getchar();
+        cout<<"And run away"<<endl;
+        getchar();
+        cout<<"But it happen an accident"<<endl;
+        getchar();
+        cout<<"You slip and fall on the stair that make you get caught by zombies"<<endl;
+        getchar();
+        cout<<"And you are eaten by zombies"<<endl;
+        }
+        else if(way2==2){
+          cout<<"zombie attack you"<<endl;
+           getchar();
+          cout<<"and you die"<<endl;
+      }
+    }
+  }  
+}
+#endif

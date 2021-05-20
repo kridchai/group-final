@@ -16,24 +16,19 @@ class thing{
     virtual void show_thing();
     void insert(thing*&); 
     thing* move_next();
+    void setNext(thing*);
 
 };
 
 thing* thing::move_next(){
       return next;
 }
-void  thing:: show_thing(){
+void  thing::show_thing(){
          cout<<"Node data:"<<data<<endl;
  }
 void thing::insert(thing*& x){
      x->next=this;
 }
-
-
-
-
-
-
 
 
 // Derived class
@@ -78,6 +73,11 @@ void thing::get_thing(){
    i++;
   }while(i<2);
 }
+
+
+void thing::setNext(thing* t){
+    next = t;
+ }
 
 
 
