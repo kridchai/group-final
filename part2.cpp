@@ -9,11 +9,15 @@ int Part2(string n) {
   string name;
   name = n;
 
-  cout<<name<<": Ahhhhhhhhh~~~~~~~~"<<endl;.
+  cout<<name<<": Ahhhhhhhhh~~~~~~~~"<<endl;
   getchar();
   cout<<name<<": WHAT!! I just have nightmare"<<endl;
   getchar();
-  cout << "Today I\'m going to work!!!\n\n";
+  cout<<"Look at the clock"<<endl;
+  getchar();
+  cout<<name<<": It's late"<<endl;
+  getchar();
+  cout <<name<<": I have to going to work now!!!\n\n";
   getchar();
 
   n1.get_turn1_go_work();
@@ -41,14 +45,14 @@ int Part2(string n) {
   getchar();
   cout<<"Friends: Let\'s go get something to eat?"<<endl;
   getchar();
-  cout<<"Okay. Let\'s go."<<endl;
+  cout<<name<<": Okay. Let\'s go."<<endl;
   getchar();
 
   n1.get_turn3_eat_after_work();
 
   cout<<"Friends: Let\'s go to the club place?"<<endl;
   getchar();
-  cout<<"Me: Okay. Let\'s go."<<endl;
+  cout<<name<<": Okay. Let\'s go."<<endl;
   getchar();
 
   n1.get_turn4_go_club();
@@ -68,7 +72,7 @@ int Part2(string n) {
   getchar();
   cout<<"Keep working until noon."<<endl;
   getchar();
-  cout<<"Me: I\'m so hungry. Friends are you going to have lunch with me."<<endl;
+  cout<<name<<": I\'m so hungry. Friends are you going to have lunch with me."<<endl;
   getchar();
   cout<<"Friends: Yes, I\'m hungry too."<<endl;
   getchar();
@@ -82,7 +86,7 @@ int Part2(string n) {
   cout<<"I will call my boss."<<endl;
   getchar();
   cout<<"\n--------------------- In calling ---------------------"<<endl;
-  cout<<"Me: Now I want to go to the hospital to have COVID checked."<<endl;
+  cout<<name<<": Now I want to go to the hospital to have COVID checked."<<endl;
   cout<<"Boss: Ok, You can go to the hospital right away."<<endl;
   cout<<"Thank you boss."<<endl;
   cout<<"---------------------  End calling ---------------------\n"<<endl;
@@ -92,13 +96,13 @@ int Part2(string n) {
   getchar();
   cout<<"Nurse: You need to go to the infectious examination room on the 1st floor, room 1101."<<endl;
   getchar();
-  cout<<"Me: Okay. Thank you."<<endl;
+  cout<<name<<": Okay. Thank you."<<endl;
   getchar();
   cout<<"\n--- After 2 hours ---"<<endl;
   getchar();
   cout<<"The results come out that you are addicted COVID-19."<<endl;
   getchar();
-  cout<<"Me: Seeing the results, I fainted."<<endl;
+  cout<<name<<": Seeing the results, I fainted."<<endl;
   getchar();
 
   return 0;

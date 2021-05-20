@@ -5,7 +5,7 @@
 #include "rolevirus.cpp"
 #include "bst.h"
 #include "swap.h"
-#include "myex.cpp"
+#include "myex.h"
 #include "rolehuman.cpp"
 using namespace std;
 int ip2,ip3;
@@ -229,10 +229,11 @@ for(int i=0;i<3;i++)
 if(f==0)
 {
   cout<<"you lost";puts( "\nเฉลย :\n" );
-   inOrder( b.rootPtr );return 0;
+   preOrder( b.rootPtr );return 0;
 }
 puts( "\nเฉลย :\n" );
- inOrder( b.rootPtr );
+ preOrder( b.rootPtr );
+ cout<<endl;
 cout<<"อีกไม่กี่อึดใจเดียวคุณก็จะรอดชีวิตแล้วอดทนไว้!!\n";
  getchar();
 cout<<"last mission ให้เรียงเลขจาก10ตัวที่แล้วจากน้อยไปมาก ยากใช่ไหมล่ะ หึ\n";

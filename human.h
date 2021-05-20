@@ -2,7 +2,7 @@
 #define human_h
 
 #include <iostream>
-#include "LLthing.cpp"
+#include "thing.cpp"
 using namespace std;
 class human{
   public:
@@ -15,7 +15,7 @@ class human{
   bool isDead();
   void setAtk(int );
   int getAtk();
-  human(string,int = 3,int = 0);
+  human(string,int = 100,int = 0);
   void setHp(int h);
   int getHp();
   virtual ~human();
@@ -25,11 +25,14 @@ human::human(string n,int h,int a){
    hp=h;
    atTack=a;
 }
-void human::get_name(string name){
-  
-   cin>>atTack;
+void human::get_name(string n){
+  int atk;
+  cout<<"Get attack: ";
+   cin>>atk;
+   name = n;
+  atTack = atk;
    hp = 100;
-   human(name,hp,atTack);
+  
  }
 
 void human::setHp(int h){
@@ -75,7 +78,7 @@ void human::survive(){
   cout<<endl;
   cout<<endl;
   
-
+  //day1
   cout<<name<<": OOOWWWwwwww~~ (yawn)"<<endl;
   getchar();
   cout<<name<<": What time is it?"<<endl;
@@ -98,12 +101,12 @@ void human::survive(){
   cout<<name<<": What going on?"<<endl;
   getchar();
   cout<<"You have to choose "<<endl;
-  cout<<"1.Go out side  2.Stay in your room"<<endl;
+  cout<<"1)Go out side  2)Stay in your room"<<endl;
   cin>>way1;
   if(way1==1){
-    cout<<"Then "<<name<<" go out side"<<endl;
+    cout<<"Then you go out side"<<endl;
   cout<<"What way you to go ?"<<endl;
-  cout<<"1.Left     2.Right"<<endl;
+  cout<<"1)Left     2)Right"<<endl;
   cin>>way1;
     if(way1==1){
       cout<<"walk to the left"<<endl;
@@ -118,7 +121,7 @@ void human::survive(){
       getchar();
       cout<<"Then you run back to your room"<<endl;
       cout<<"And you faint in your room"<<endl;
-
+      //same
     }
     else if(way1==2){
       cout<<"Walk to the right"<<endl;
@@ -128,8 +131,8 @@ void human::survive(){
       cout<<"See many people infected and act like zombies"<<endl;
       getchar();
       cout<<"What you want to do ?"<<endl;
-      cout<<"1. Run away to your room"<<endl;
-      cout<<"2. Go to 7-eleven and get some food"<<endl;
+      cout<<"1) Run away to your room"<<endl;
+      cout<<"2) Go to 7-eleven and get some food"<<endl;
       cin>>way1;
       if(way1==1){
         cout<<name<<": What the f**k"<<endl;
@@ -141,15 +144,13 @@ void human::survive(){
         cout<<"Run very quickly"<<endl;
         getchar();
         cout<<"When you in your room"<<endl;
-        getchar();
-        cout<<name<<": I very tried -_- (sleep)"<<endl;
       }
       else if(way1==2){
         cout<<name<<": I have to get some food or things that can help survive"<<endl;
         cout<<"What you want to pick ? (can pick only 2 things)"<<endl;
-        cout<<"1.bread 2.cutter 3.water 4.scissor"<<endl;
+        cout<<"1) bread \n2) cutter \n3) water \n4) scissor\n"<<endl;
         t.get_thing();
-          cout<<"When you already get item "<<endl;
+        cout<<"When you already get item "<<endl;
         getchar();
         cout<<"Run back to your room very quickly"<<endl;
         getchar();
@@ -162,16 +163,11 @@ void human::survive(){
           Food food;
           food.eat();
         }
-        else{
-          break;
-        }
-
-      }
-
+        cout<<"Sleep ZZzzz \n\n\n"<<endl;
       }
 
     }
-  
+  }
   else if(way1==2){
     cout<<name<<": I very scared"<<endl;
     getchar();
@@ -184,13 +180,21 @@ void human::survive(){
     cout<<name<<": That is zombies!!"<<endl;
     getchar();
     cout<<"Then you shock and faint"<<endl;
+    
+  //same
   }
-
 }
 
-//day2
+
+
+
+
+
+   //day2 
 void human::survive2(){
+  //thing k;
   weapon t;
+  //t.k=k;
   int way2;
    cout<<name<<": How long I sleep"<<endl;
    getchar();
@@ -210,9 +214,7 @@ void human::survive2(){
       cin>>way2;
       if(way2==1){
       t.use_thing();
-      cout<<"You use your weapon kill zombies"<<endl;
-      getchar();
-      cout<<"And run away"<<endl;
+   
       }
       else if(way2==2){
         cout<<"zombie attack you"<<endl;
@@ -240,24 +242,14 @@ void human::survive2(){
           cout<<"Then you fall on the ground"<<endl;
           getchar();
           cout<<"And die finally"<<endl;
-          if(way2==1){
-        t.use_thing();
-        cout<<"You use your weapon kill zombies"<<endl;
-        getchar();
-        cout<<"And run away"<<endl;
-        getchar();
-        cout<<"But it happen an accident"<<endl;
-        getchar();
-        cout<<"You slip and fall on the stair that make you get caught by zombies"<<endl;
-        getchar();
-        cout<<"And you are eaten by zombies"<<endl;
         }
         else if(way2==2){
-          cout<<"zombie attack you"<<endl;
+          cout<<"zombie break the door"<<endl;
            getchar();
-          cout<<"and you die"<<endl;
+          cout<<"and zombie come to eat you"<<endl;
       }
     }
-  }  
 }
+
+
 #endif

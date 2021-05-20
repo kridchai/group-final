@@ -1,60 +1,90 @@
-//#ifndef thing_h
-//#define thing_h
+#ifndef thing_h
+#define thing_h
 #include <iostream>
+#include <exception>
 using namespace std;
 
+int f;
+int k;
 class thing{
-  private:
-        thing* next;
-        string data;
-  
-  public:
-    void something() {
-    cout << "The animal makes a sound \n" ;
-  }
-    void get_thing();
-    virtual void show_thing();
-    void insert(thing*&); 
-    thing* move_next();
-    void setNext(thing*);
 
+        
+  public:
+  
+    virtual void something() {
+    cout << ".... \n" ;
+  }
+  void get_thing();
+  
 };
 
-thing* thing::move_next(){
-      return next;
-}
-void  thing::show_thing(){
-         cout<<"Node data:"<<data<<endl;
- }
-void thing::insert(thing*& x){
-     x->next=this;
-}
 
 
 // Derived class
 class Food : public thing {
+
   public:
+
     void something() {
     cout << "get Food \n" ;
+    f++;
    }
+   void eat(){
+     if(f>0){
+       cout<<"Eating food"<<endl;
+       
+     }
+     else if(f<=0){
+       cout<<"Don't have any food"<<endl;
+     }
+   }
+   
 };
 
 // Derived class
 class weapon : public thing {
+
+  
   public:
     void something() {
     cout << "get weapon \n" ;
+     k++;
   }
+  void use_thing();
 };
+
+void weapon::use_thing(){
+  if(k>0){
+    cout<<"!!Attack!!"<<endl;
+       cout<<"You use your weapon kill zombies"<<endl;
+      getchar();
+      cout<<"And run away"<<endl;
+      getchar();
+       cout<<"But it happen an accident"<<endl;
+        getchar();
+        cout<<"You slip and fall on the stair that make you get caught by zombies"<<endl;
+        getchar();
+        cout<<"And you are eaten by zombies"<<endl;
+  }
+  else if(k<=0){
+    cout<<"Can't attack ,you doesn't have any weapon"<<endl;
+     getchar();
+    cout<<"zombies eat you"<<endl;
+    
+  }
+
+
+}
 void thing::get_thing(){
-  int things[2];
+
+  int n;
   int i=0;
   do{
   cout<<i+1<<":";
-  cin>>things[i];
+  cin>>n;
   Food myfood;
   weapon myweapon;
-  switch(things[i]){
+  switch(n){
     case 1:
     myfood.something();
     break;
@@ -67,21 +97,11 @@ void thing::get_thing(){
     case 4:
     myweapon.something();
     break;
-    //default:
-    
   }
    i++;
   }while(i<2);
 }
-
-
-void thing::setNext(thing* t){
-    next = t;
- }
-
-
-
 /////////////////////
 
 
-//#endif
+#endif
